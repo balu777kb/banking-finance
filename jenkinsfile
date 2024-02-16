@@ -30,8 +30,8 @@ pipeline{
         }
         stage('run dockerfile'){
           steps{
-                sh 'docker build -t myimg .
-                sh 'docker run -dt -p 8082:80 --name c001
+                sh 'docker build -t myimg .'
+                sh 'docker run -dt -p 8082:80 --name c001'
               }
          }
     }
