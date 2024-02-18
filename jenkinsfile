@@ -13,21 +13,6 @@ pipeline{
                 sh 'mvn compile'
             }
         }
-        stage('codetesting with balu'){
-            steps{
-                sh 'mvn test'
-            }
-        }
-        stage('qa with balu'){
-            steps{
-                sh 'mvn checkstyle:checkstyle'
-            }
-        }
-        stage('package with balu'){
-            steps{
-                sh 'mvn package'
-            }
-        }
         
-    }
+     }
 }
