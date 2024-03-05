@@ -7,27 +7,6 @@ pipeline{
                  echo 'github url checkout'
             }
         }
-        stage('codecompile with balu'){
-            steps{
-                echo 'starting compiling'
-                sh 'mvn compile'
-            }
-        }
-        stage('codetesting with balu'){
-            steps{
-                sh 'mvn test'
-            }
-        }
-        stage('qa with balu'){
-            steps{
-                sh 'mvn checkstyle:checkstyle'
-            }
-        }
-        stage('package with balu'){
-            steps{
-                sh 'mvn package'
-            }
-        }
        stage('run dockerfile'){
           steps{
                sh 'docker build -t myimg .'
