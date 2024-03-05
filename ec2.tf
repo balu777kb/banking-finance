@@ -1,6 +1,6 @@
 #Initialize Terraform
 terraform {
-  required_providers {
+  required_provider {
     aws = {
       source  = "hashicorp/aws"
       version = "~> 4.0"
