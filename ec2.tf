@@ -7,10 +7,13 @@ terraform {
   }
 }
 
-# Configure the AWS Provider
-  provider "aws"{
-  region  = "us-east-2"
-}
+   provider "aws" {
+     region = "us-west-2"
+     assume_role {
+       role_arn = "arn:aws:iam::05803413c51f242b7:role/fullaccess"
+     }
+   }
+   
 
 # Creating a VPC
 resource "aws_vpc" "proj-vpc" {
