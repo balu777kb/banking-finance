@@ -13,7 +13,7 @@ terraform {
  resource "aws_instance" "Prod-Server" {
    ami               = "ami-0f5daaa3a7fb3378b"
    instance_type     = "t2.micro"
-   avsilsbility_zone = "us-east-2a"
+   availability_zone = "us-east-2a"
    key_name          = "moddu"
     
    tags = {
