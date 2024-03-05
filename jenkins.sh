@@ -14,20 +14,6 @@ sudo apt-get install jenkins -y
 service jenkins start
 cat /var/lib/jenkins/secrets/initialAdminPassword
 #chmod 777 jenkins.sh
-#./jenkins.sh
- apt update
-      apt install default-jdk -y
-     apt install maven
-      apt install maven -y
-      sudo wget -O /usr/share/keyrings/jenkins-keyring.asc   https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
-    
-  echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]   https://pkg.jenkins.io/debian-stable binary/ | sudo tee   /etc/apt/sources.list.d/jenkins.list > /dev/null
-    
-  sudo apt-get update
-    
-  sudo apt-get install jenkins
-    
-  cat /var/lib/jenkins/secrets/initialAdminPassword
     sudo apt update
    sudo apt install software-properties-common
     sudo add-apt-repository --yes --update ppa:ansible/ansible
@@ -57,13 +43,4 @@ https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/
  
  sudo bash /tmp/installDocker.sh
    
-  sudo systemctl restart docker.service
-
- sudo wget https://raw.githubusercontent.com/lerndevops/labs/master/scripts/installCRIDockerd.sh -P /tmp
-
-  sudo chmod 755 /tmp/installCRIDockerd.sh
-
- sudo bash /tmp/installCRIDockerd.sh
-
- sudo systemctl restart cri-docker.service
 
